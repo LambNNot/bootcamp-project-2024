@@ -135,8 +135,6 @@ html {
   .about-me img{
     border-radius: 50%;
     border: 10px dotted goldenrod;
-
-
   }
 
   .about-me img:hover .overlay{
@@ -202,4 +200,12 @@ html {
     border: 2px ridge rgb(143, 104, 7);
     border-radius: 5%;
   }
+
+.blog-post{
+  background-color: rgb(22, 48, 48);
+  color:white;
+  text-align: center;
+  height:10rem;
+  width:75rem;
+}
   
