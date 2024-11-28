@@ -32,6 +32,10 @@ const blogsContainer = document.getElementById("blogs-container")
 
 //Traverse through blogs list, appending to blogs container
 blogs.forEach(blog=>{
+    const blogLink = document.createElement("a");
+    blogLink.setAttribute("href", "./blogs/"+blog.slug+".html");
+    blogsContainer?.appendChild(blogLink);
+
     const blogPostContainer = document.createElement("div");
     blogPostContainer.classList.add("blog-post");
 
@@ -49,5 +53,5 @@ blogs.forEach(blog=>{
     blogDesc.textContent = blog.description;
     blogPostContainer.appendChild(blogDesc);        //Add blog description
 
-    blogsContainer?.appendChild(blogPostContainer); //Add blog post to blogs container
+    blogLink.appendChild(blogPostContainer); //Add blog post to blogs container
 });

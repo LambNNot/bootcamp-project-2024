@@ -20,6 +20,9 @@ var blogs = [
 var blogsContainer = document.getElementById("blogs-container");
 //Traverse through blogs list, appending to blogs container
 blogs.forEach(function (blog) {
+    var blogLink = document.createElement("a");
+    blogLink.setAttribute("href", "./blogs/" + blog.slug + ".html");
+    blogsContainer === null || blogsContainer === void 0 ? void 0 : blogsContainer.appendChild(blogLink);
     var blogPostContainer = document.createElement("div");
     blogPostContainer.classList.add("blog-post");
     var blogTitle = document.createElement("h1");
@@ -33,5 +36,5 @@ blogs.forEach(function (blog) {
     var blogDesc = document.createElement("p");
     blogDesc.textContent = blog.description;
     blogPostContainer.appendChild(blogDesc); //Add blog description
-    blogsContainer === null || blogsContainer === void 0 ? void 0 : blogsContainer.appendChild(blogPostContainer); //Add blog post to blogs container
+    blogLink.appendChild(blogPostContainer); //Add blog post to blogs container
 });
