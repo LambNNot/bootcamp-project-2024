@@ -1,16 +1,19 @@
 import React from 'react';
 import style from './blogPreview.module.css';
+import {Blog} from "@/static/blogData"
 import Image from "next/image";
 
-export default function BlogPreview() {
+export default function BlogPreview(props: Blog) {
   return (
-	<>
-        <h3>Blog Name</h3>
+	<div className={style.blogPost}>
+        <h3 className={style.blogTitle}>{props.title}</h3>
         <div>
-            <Image src="./imageLinkHere" alt="img" width={500} height={500}/>
-            <p>Blog description</p>
-            <p>Posted on...</p>
+            <div className={style.imgWrapper}>
+            <Image src={props.image} alt={props.imageAlt} width={50} height={50}/>
+            </div>
+            <p>{props.description}</p>
+            <p className={style.pubDate}><em>Published: {props.date}</em></p>
         </div>
-    </>
+    </div>
   );
 }

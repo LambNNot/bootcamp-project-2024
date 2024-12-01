@@ -9,10 +9,9 @@
 }
 
 main{
-    padding: 0 20px 40px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: darkslategray;
     position: relative;
@@ -32,4 +31,28 @@ h1{
     margin-inline-end: 0px;
     font-weight: bold;
     unicode-bidi: isolate;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  }
+
+a:hover,
+a:active {
+  text-decoration: underline;
+  color: goldenrod;
+}
+a{
+  color: white;
+  font-weight: bold;
+  margin: 10px 12px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  cursor:pointer;
 }

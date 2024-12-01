@@ -1,0 +1,23 @@
+
+.blogPost{
+    background-color: rgb(22, 48, 48);
+    color:white;
+    text-align: center;
+    width:75rem;
+    padding: 1rem 0rem 1rem 0rem;
+    margin: 2rem 2rem;
+  }
+
+.blogTitle{
+    text-decoration: underline;
+}
+
+.imgWrapper{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.pubDate{
+    color: lightgrey;
+}
