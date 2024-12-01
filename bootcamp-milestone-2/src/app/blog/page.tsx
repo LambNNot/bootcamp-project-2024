@@ -1,10 +1,11 @@
 import React from "react";
 import style from "./blogs.module.css";
-import Link from "next/link";
-import classNames from "classnames";
-
 import blogs from "@/static/blogData";
+import BlogPreview from "@/components/blogPreview";
 
+/*{blogs.map(blog =>
+    <BlogPreview/>
+)}*/
 
 export default function Blogs(){
     return(

@@ -1,15 +1,23 @@
+:global(main){
+        padding: 0 20px 40px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: darkslategray;
+        position: relative;
+        min-height: 100vh;
+        padding: 0;
+        margin: 0;
+}
+
 .mainTitle{
     text-align: center;
     font-size: 60px;
     font-style: italic;
     font-family:Georgia, 'Times New Roman', Times, serif;
     color: goldenrod;
-    
     width: 50%;
     padding-bottom: 20px;
     border-bottom: 2px solid darkgoldenrod;
-}
-
-.blogsDiv{
-    
 }

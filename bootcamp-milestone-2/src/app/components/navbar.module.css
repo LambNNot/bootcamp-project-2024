@@ -1,12 +1,3 @@
-:global(*){ /*Default CSS Selector*/
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-:global(h1){
-    font-size: 1.5em;
-}
-
 .header{
     background-color: darkslategray;
     padding: 0;

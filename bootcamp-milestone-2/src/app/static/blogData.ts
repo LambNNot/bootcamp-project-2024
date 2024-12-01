@@ -27,6 +27,8 @@ const blogs: Blog[] = [
     }
 ];
 
+export default blogs;
+
 //Reference blogs container
 const blogsContainer = document.getElementById("blogs-container")
 

@@ -1,35 +1,3 @@
-:global(*){ /*Default CSS Selector*/
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:global(main){
-    padding: 0 20px 40px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: darkslategray;
-    position: relative;
-    min-height: 100vh;
-    padding: 0;
-    margin: 0;
-    
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
-
-:global(h1){
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
-}
-
 .mainTitle{
     text-align: center;
     font-size: 60px;
