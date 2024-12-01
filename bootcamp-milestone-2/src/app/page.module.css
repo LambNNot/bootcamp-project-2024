@@ -1,0 +1,89 @@
+:global(*){ /*Default CSS Selector*/
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:global(main){
+    padding: 0 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darkslategray;
+    position: relative;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+:global(h1){
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.mainTitle{
+    text-align: center;
+    font-size: 60px;
+    font-style: italic;
+    color: goldenrod;
+    width: 50%;
+    padding-bottom: 20px;
+    border-bottom: 2px solid darkgoldenrod;
+}
+
+.img{
+    background-color: rgb(22, 48, 48);
+    padding: 20px;
+    width: 800px;
+    height: 600px;
+    object-fit: cover;
+}
+
+.abtMeImg{
+    width: 500px; 
+    height: 500px; 
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px dotted goldenrod;
+}
+.abtMeImgContainer{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.abtMe{
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    margin: 2rem 10rem;
+    border-color: black;
+}
+
+.abtMeTitle{
+    text-decoration: underline;
+    padding-top: 8px;
+    border-top: 2px solid darkgoldenrod;
+    color:rgb(248, 220, 150);
+}
+
+.abtMeText{
+    font-size: 18px;
+    font-weight: lighter;
+    color: whitesmoke;
+    background-color: rgb(22, 48, 48);
+    border: 15px double darkred;
+    padding: 20px;
+    margin: 0;
+}

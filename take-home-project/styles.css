@@ -2,7 +2,7 @@ html {
     height: 100%;
   }
   
-  body {
+  body{
     background-color: darkslategray;
     position: relative;
     min-height: 100vh;
@@ -83,8 +83,6 @@ html {
     bottom: 0;
     width: 100%;
     height: 2.5rem;
-
-
     border-top: 5px inset darkred;
     font-size: smaller;
   }
@@ -114,7 +112,6 @@ html {
     background-color: rgb(22, 48, 48);
     border: 15px double darkred;
     padding: 20px;
-
     margin: 0;
   }
 
@@ -135,23 +132,6 @@ html {
   .about-me img{
     border-radius: 50%;
     border: 10px dotted goldenrod;
-  }
-
-  .about-me img:hover .overlay{
-    opacity: 1;
-  }
-
-  .overlay{
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
   }
 
   .logo{
