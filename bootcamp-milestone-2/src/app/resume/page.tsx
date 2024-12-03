@@ -1,8 +1,6 @@
 import React from "react";
 import style from "./resume.module.css";
 import "../globals.css";
-import Link from "next/link";
-import classNames from "classnames";
 
 export default function Resume(){
     return(
