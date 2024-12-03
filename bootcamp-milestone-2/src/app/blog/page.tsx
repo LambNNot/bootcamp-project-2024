@@ -1,7 +1,6 @@
 import React from "react";
 import style from "./blogs.module.css";
 import "../globals.css";
-import {Blog} from "@/static/blogData";
 import blogs from "@/static/blogData";
 import BlogPreview from "@/components/blogPreview";
 
