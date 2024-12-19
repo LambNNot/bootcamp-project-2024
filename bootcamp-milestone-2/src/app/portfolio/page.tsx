@@ -1,28 +1,39 @@
 import React from "react";
 import style from "./portfolio.module.css";
 import "../globals.css";
-import Image from "next/image";
-import Link from "next/link";
+import connectDB  from "../../database/db";
+import Project from "../../database/projectSchema";
+import ProjectPreview from "@/components/projectPreview";
 
-export default function Portfolio(){
+async function getProjects(){
+    await connectDB();
+
+    try{ // Query for all projects
+        const projects = await Project.find().orFail() // Send a response as the projects as the message
+        return projects.map(project =>({
+            name : project.name,
+            description : project.description,
+            image : project.image,
+            imageAlt : project.imageAlt,
+            slug : project.slug
+        }))
+    }catch(err){
+        return null
+    }
+}
+
+export default async function Portfolio(){
+    const projects = await getProjects(); // Fetch data before rendering page
+    if(!projects) return <div>Error loading projects</div>;
+
     return(
         <>
         <main>
             <h1 className="mainTitle">Portfolio</h1>
-            <div className={style.project}>
-                <Link href="/">
-                    <Image src="/LambNNot_Logo.png" alt="LambNNot Logo" width={500} height={500}/>
-                    <p>DeMa Excerpt</p>
-                </Link>
-                <div className={style.projectDetails}>
-                    <p className={style.projectName}>
-                        DeMa Excerpt
-                    </p>
-                    <p className={style.projectDescription}>
-                        Sam Phan's Personal Project for Hack4Impact! :D
-                    </p>
-                    <Link href="/">Learn More</Link>
-                </div>
+            <div className={style.projectsDiv} id="projects-container">
+                {projects.map(project =>(
+                    <ProjectPreview key={project.name} {...project}/>
+                ))}
             </div>
         </main>
         </>

@@ -1,10 +1,32 @@
 import React from "react";
 import style from "./blogs.module.css";
 import "../globals.css";
-import blogs from "@/static/blogData";
 import BlogPreview from "@/components/blogPreview";
+import connectDB from "@/../database/db";
+import Blog from "@/../database/blogSchema";
 
-export default function Blogs(){
+async function getBlogs(){
+    await connectDB();
+
+    try{ // Query for all blogs and sort by date
+        const blogs = await Blog.find().sort({date:-1}).orFail() // Send a response as the blogs as the message
+        return blogs.map(blog =>({
+            title : blog.title,
+            date : blog.date,
+            description : blog.description,
+            image : blog.image,
+            imageAlt : blog.imageAlt,
+            slug : blog.slug
+        }))
+    }catch(err){
+        return null
+    }
+}
+
+export default async function Blogs(){
+    const blogs = await getBlogs(); // Fetch data before rendering page
+    if(!blogs) return <div>Error loading blogs</div>;
+
     return(
         <>
         <main>
