@@ -47,7 +47,7 @@ export default async function BlogPage({params}:Props){
         <main>
             <h1 className="mainTitle">{blog.title}</h1>
             <div className={style.blogContent}> 
-                <p>Blog text...</p>
+                <p>Blog filler text...</p>
             </div>
             <div className={style.commentContainer}>
                 <h4 className={style.commentsSectionTitle}><b>------- Comments -------</b></h4>
