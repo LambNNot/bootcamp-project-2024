@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./blogs.module.css";
-import "../globals.css";
+import "@/globals.css";
 import BlogPreview from "@/components/blogPreview";
 import connectDB from "@/../database/db";
 import Blog from "@/../database/blogSchema";
@@ -16,7 +16,8 @@ async function getBlogs(){
             description : blog.description,
             image : blog.image,
             imageAlt : blog.imageAlt,
-            slug : blog.slug
+            slug : blog.slug,
+            comments : blog.comments
         }))
     }catch(err){
         return null
