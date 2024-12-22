@@ -19,7 +19,7 @@ async function getBlogs(){
             slug : blog.slug,
             comments : blog.comments
         }))
-    }catch(err){
+    }catch(_err){
         return null
     }
 }

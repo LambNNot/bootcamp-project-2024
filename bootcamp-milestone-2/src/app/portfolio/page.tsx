@@ -17,7 +17,7 @@ async function getProjects(){
             imageAlt : project.imageAlt,
             slug : project.slug
         }))
-    }catch(err){
+    }catch(_err){
         return null
     }
 }

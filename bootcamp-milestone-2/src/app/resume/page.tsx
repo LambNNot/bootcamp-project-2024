@@ -47,14 +47,14 @@ export default function Resume(){
                         Hack4Impact Starter Pack Deliverable
                     </p>
                     <p className={style.resumeEntryDescription}>
-                        Sam Phan's Personal Website(?)
+                        Sam Phan&aposs Personal Website(?)
                     </p>
                     <h3 className={style.resumeEntryTitle}>Campfire Demo</h3>
                     <p className={style.resumeEntryInfo}>
                         <em>Campfire Demo</em> for AP-Computer Science Principles
                     </p>
                     <p className={style.resumeEntryDescription}>
-                        It's a game :P
+                        It&aposs a game :P
                     </p>
                 </div>
             </section>

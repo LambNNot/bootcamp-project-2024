@@ -27,7 +27,7 @@ export async function POST(req:NextRequest, {params}:IParams){
             {$push:{ 
                 // Push new comment
                 comments:{
-                    user: body.user,
+                    user: body.user,    
                     comment: body.comment,
                     time: body.time
                 }
