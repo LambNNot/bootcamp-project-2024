@@ -10,7 +10,7 @@ type Props = {
 
 async function getProject(slug: string) {
   try {
-    const req = await fetch(`/api/projects/${slug}`, {
+    const req = await fetch(`https://h4i-bootcamp-2024.vercel.app/api/projects/${slug}`, {
       cache: "no-store",
     });
 
