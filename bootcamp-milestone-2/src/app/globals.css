@@ -65,6 +65,7 @@ a{
   cursor:pointer;
 }
 
+
 .mainTitle{
   text-align: center;
   font-size: 60px;
@@ -96,12 +97,9 @@ label{
   text-decoration: underline;
 }
 
-input,
 textarea{
-  background-color: rgb(22, 48, 48);
-  color: white;
-  border: 2px ridge rgb(143, 104, 7);
-  border-radius: 5%;
+  width: 20rem;
+  height: 10rem;
 }
 
 p{
@@ -111,4 +109,12 @@ p{
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   unicode-bidi: isolate;
+}
+
+button{
+  margin: 1rem;
+  background-color: rgb(10, 27, 27);
+  width: 10rem;
+  height: 2rem;
+  border-radius: 45%;
 }
