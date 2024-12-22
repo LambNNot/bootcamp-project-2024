@@ -3,7 +3,13 @@ import connectDB from "@/../database/db";
 import projectSchema from "@/../database/projectSchema"
 import {IComment} from "@/../database/comment";
 
-export async function POST(req:NextRequest, {params}:{params:{slug:string}}){
+type IParams = {
+    params: {
+        slug: string;
+    }
+}
+
+export async function POST(req:NextRequest, {params}:IParams){
     await connectDB();
 
     const {slug} = await params; // Get slug
