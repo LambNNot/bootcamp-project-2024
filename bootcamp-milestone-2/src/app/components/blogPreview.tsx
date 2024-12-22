@@ -8,13 +8,13 @@
     const formattedDate = new Date(props.date).toLocaleString(); // Convert from MongoDB Date format
     return (
       <div className={style.blogPost}>
-          <Link className = {style.blogLink} href={`/blog/${props.slug}`}>
-          <h3 className={style.blogTitle}>{props.title}</h3>
-          <div className={style.imgWrapper}>
-            <Image src={props.image} alt={props.imageAlt} width={50} height={50}/>
-          </div>
-          <p>{props.description}</p>
-          <p className={style.pubDate}><em>Published: {formattedDate}</em></p>
+          <Link className = {style.blogLink} href={`/blogs/${props.slug}`}>
+            <h3 className={style.blogTitle}>{props.title}</h3>
+            <div className={style.imgWrapper}>
+              <Image src={props.image} alt={props.imageAlt} width={50} height={50}/>
+            </div>
+            <p>{props.description}</p>
+            <p className={style.pubDate}><em>Published: {formattedDate}</em></p>
           </Link>
       </div>
     );

@@ -12,7 +12,7 @@ export default function ProjectPreview(props: Project){
                 <Image src={props.image} alt={props.imageAlt} width={500} height={100}/> 
             </div>
             <p className={style.projectDesc}>{props.description}</p>
-            <Link className = {style.projectLink} href={props.slug}>Learn More</Link>
+            <Link className = {style.projectLink} href={`/portfolio/projects/${props.slug}`}>Learn More</Link>
         </div>
     );
 }

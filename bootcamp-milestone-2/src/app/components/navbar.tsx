@@ -15,7 +15,7 @@ export default function NavBar() {
             <li className={style.navItem}><Link className={style.link} href="/contact">Contact</Link></li>
             <li className={style.navItem}><Link className={style.link} href="/portfolio">Portfolio</Link></li>
             <li className={style.navItem}><Link className={style.link} href="/resume">Resume</Link></li>
-            <li className={style.navItem}><Link className={style.link} href="/blog">Blog</Link></li>
+            <li className={style.navItem}><Link className={style.link} href="/blogs">Blog</Link></li>
         </ul>
       </nav>
     </header>
