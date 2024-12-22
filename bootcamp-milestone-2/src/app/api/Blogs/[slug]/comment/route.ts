@@ -5,7 +5,7 @@ import {IComment} from "@/../database/comment";
 
 type IParams = {
     params: {
-        slug:String;
+        slug:string;
     }
 }
 
@@ -38,7 +38,7 @@ export async function POST(req: NextRequest, {params}:IParams) {
             {new:true, runValidators:true}
         ).orFail();
         return NextResponse.json(blog);
-    }catch(err){
+    }catch(_err){
         return NextResponse.json('Blog not found.', {status : 404});
     }
 }
