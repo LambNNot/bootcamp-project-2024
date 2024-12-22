@@ -35,7 +35,7 @@ export async function POST(req:NextRequest, {params}:IParams){
             {new:true, runValidators:true}
         ).orFail();
         return NextResponse.json(project);
-    }catch(err){
+    }catch{
         return NextResponse.json('Project not found.', {status : 404});
     }
 }

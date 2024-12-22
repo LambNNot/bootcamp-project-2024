@@ -1,7 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 import commentSchema from "@/../database/comment";
 import {IComment} from "@/../database/comment";
-import { comment } from "postcss";
 
 
 export type Project = {

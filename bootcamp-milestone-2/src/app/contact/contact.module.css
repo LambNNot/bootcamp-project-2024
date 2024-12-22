@@ -1,5 +1,13 @@
-.contactForm{
-
+.invite{
+    color:white;
+    font-size: larger;
+    margin-bottom: 1rem;
+    background-color: rgb(10, 27, 27);
+    width: 20rem;
+    height: 4rem;
+    text-align: center;
+    padding: 0.25rem;
+    border: 10px inset darkred;
 }
 
 .contactButton{

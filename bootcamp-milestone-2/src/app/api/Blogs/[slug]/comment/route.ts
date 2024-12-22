@@ -38,7 +38,7 @@ export async function POST(req: NextRequest, {params}:IParams) {
             {new:true, runValidators:true}
         ).orFail();
         return NextResponse.json(blog);
-    }catch(_err){
+    }catch{
         return NextResponse.json('Blog not found.', {status : 404});
     }
 }

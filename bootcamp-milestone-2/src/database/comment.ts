@@ -1,4 +1,4 @@
-import mongoose, {Schema} from "mongoose";
+import {Schema} from "mongoose";
 
 export type IComment = {
     user: string;

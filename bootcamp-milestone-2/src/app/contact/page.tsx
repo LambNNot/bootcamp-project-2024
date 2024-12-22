@@ -8,6 +8,7 @@ export default function Contact(){
         <>
         <main>
             <h1 className="mainTitle">Contact</h1>
+            <h4 className={style.invite}>Send me a message!</h4>
             <ContactForm/>
         </main>
         </>
