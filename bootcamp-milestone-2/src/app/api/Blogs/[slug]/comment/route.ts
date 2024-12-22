@@ -4,9 +4,9 @@ import blogSchema from "@/../database/blogSchema";
 import {IComment} from "@/../database/comment";
 
 type IParams = {
-    params: {
+    params: Promise<{
         slug:string;
-    }
+    }>
 }
 
 

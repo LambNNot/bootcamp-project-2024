@@ -4,9 +4,9 @@ import projectSchema from "@/../database/projectSchema"
 import {IComment} from "@/../database/comment";
 
 type IParams = {
-    params: {
+    params: Promise<{
         slug: string;
-    }
+    }>
 }
 
 export async function POST(req:NextRequest, {params}:IParams){

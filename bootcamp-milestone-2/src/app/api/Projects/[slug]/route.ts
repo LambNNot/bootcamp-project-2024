@@ -4,15 +4,14 @@ import connectDB from "@/../database/db";
 import projectSchema from "@/../database/projectSchema";
 
 type IParams = {
-		params: {
+		params: Promise<{
 			slug: string
-		}
+		}>
 }
 
 export async function GET(req: NextRequest, { params }: IParams) {
     await connectDB(); // function from db.ts before
     const {slug} = await params;
-
 
     try {
         const blog = await projectSchema.findOne({slug}).orFail();

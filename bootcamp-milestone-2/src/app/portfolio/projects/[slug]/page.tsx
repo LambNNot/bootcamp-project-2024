@@ -5,7 +5,7 @@ import {Project} from "@/../database/projectSchema";
 import Comment from "@/components/comment";
 
 type Props = {
-    params: {slug:string}
+    params: Promise<{slug:string}>
 }
 
 async function getProject(slug: string){

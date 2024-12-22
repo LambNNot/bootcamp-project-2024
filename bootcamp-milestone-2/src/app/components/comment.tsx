@@ -1,6 +1,6 @@
 import React from "react";
 import style from './comment.module.css';
-import {IComment} from "@/../database/blogSchema";
+import {IComment} from "@/../database/comment";
 
 
 {/* When we pass props, the name that we use to pass values

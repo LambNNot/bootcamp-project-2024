@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./projectPreview.module.css";
-import Project from "@/../database/projectSchema";
+import {Project} from "@/../database/projectSchema";
 import Image from "next/image";
 import Link from "next/link";
 

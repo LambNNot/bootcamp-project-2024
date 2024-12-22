@@ -15,7 +15,8 @@ async function getProjects(){
             description : project.description,
             image : project.image,
             imageAlt : project.imageAlt,
-            slug : project.slug
+            slug : project.slug,
+            comments : project.comments
         }))
     }catch{
         return null
