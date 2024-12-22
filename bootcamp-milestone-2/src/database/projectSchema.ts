@@ -1,11 +1,16 @@
 import mongoose, { Schema } from "mongoose";
+import commentSchema from "@/../database/comment";
+import {IComment} from "@/../database/comment";
+import { comment } from "postcss";
 
-type Project = {
+
+export type Project = {
     name: string;
     description: string;
     image: string; // Public string
     imageAlt: string; // Alt for image
     slug: string;
+    comments: IComment[];
 };
 
 const projectSchema = new Schema<Project>({
@@ -14,6 +19,7 @@ const projectSchema = new Schema<Project>({
     image : {type:String, required:true},
     imageAlt : {type:String, required:true},
     slug : {type:String, required:true},
+    comments : {type:[commentSchema], required:false},
 });
 
 const Project = mongoose.models["projects"] || mongoose.model("projects", projectSchema);

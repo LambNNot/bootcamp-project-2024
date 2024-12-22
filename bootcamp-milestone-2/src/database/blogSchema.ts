@@ -1,10 +1,6 @@
 import mongoose, { Schema } from "mongoose";
-
-export type IComment = {
-    user: string;
-    comment: string;
-    time: Date;
-}
+import {IComment} from "@/../database/comment";
+import commentSchema from "@/../database/comment";
 
 // typescript type (can also be an interface)
 export type Blog = {
@@ -16,12 +12,6 @@ export type Blog = {
   imageAlt: string; // alt for image
   comments: IComment[] // Array for comments
 };
-
-const commentSchema = new Schema<IComment>({
-  user: {type: String, required: true},
-  comment: {type: String, required: true},
-  time: {type: Date, required: true}
-});
 
 // mongoose schema
 const blogSchema = new Schema<Blog>({

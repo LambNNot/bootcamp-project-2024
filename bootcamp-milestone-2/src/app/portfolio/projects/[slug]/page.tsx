@@ -1,22 +1,22 @@
 import React from "react";
 import "@/globals.css";
-import style from "./blogPage.module.css";
-import {Blog} from "@/../database/blogSchema";
+import style from "./projectPage.module.css";
+import {Project} from "@/../database/projectSchema";
 import Comment from "@/components/comment";
 
 type Props = {
     params: {slug:string}
 }
 
-async function getBlog(slug: string){
+async function getProject(slug: string){
     try{
-        const req = await fetch(`http://localhost:3000/api/Blogs/${slug}`, {
+        const req = await fetch(`http://localhost:3000/api/Projects/${slug}`, {
             cache: "no-store",
         });
 
         // Validate check GET request
         if(!req.ok){
-            throw new Error("Failed to fetch blog");
+            throw new Error("Failed to fetch project");
         }
 
         return req.json();
@@ -27,15 +27,15 @@ async function getBlog(slug: string){
     }
 }
 
-export default async function BlogPage({params}:Props){
+export default async function ProjectPage({params}:Props){
     const {slug} = await params; // Need to await params before using properties :P
 
-    const blog:Blog = await getBlog(slug);
-    if(!blog){
+    const project:Project = await getProject(slug);
+    if(!project){
         return(
             <>
             <main>
-                <h1>ERROR 404: Blog Not Found</h1>
+                <h1>ERROR 404: Project Not Found</h1>
             </main>
             </>
         );
@@ -44,13 +44,13 @@ export default async function BlogPage({params}:Props){
     return(
         <>
         <main>
-            <h1 className="mainTitle">{blog.title}</h1>
-            <div className={style.blogContent}> 
-                <p>Blog filler text...</p>
+            <h1 className="mainTitle">{project.name}</h1>
+            <div className={style.projectContent}> 
+                <p>Project filler text...</p>
             </div>
             <div className={style.commentContainer}>
                 <h4 className={style.commentsSectionTitle}><b>------- Comments -------</b></h4>
-                {blog.comments.map((comment, index) =>(
+                {project.comments.map((comment, index) =>(
                     <Comment key={index} comment={comment}/>
                 ))}
             </div>
